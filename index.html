@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智博罗盘 | 申博一站式服务平台</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="智博罗盘首页">
+        <img class="brand-logo" src="./assets/logo-compass-blue.png" alt="智博罗盘 logo" />
+        <span>
+          <strong>智博罗盘</strong>
+          <small>申博一站式服务平台</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="网站导航">
+        <a href="#mentor-search">导师库</a>
+        <a href="#ai-match">AI匹配</a>
+        <a href="#services">服务</a>
+        <a href="#pricing">价格</a>
+        <a href="#roadmap">开发路线</a>
+      </nav>
+      <a class="header-cta" href="#mentor-search">开始体验</a>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <div class="hero-brandline">
+            <img src="./assets/logo-compass-blue.png" alt="智博罗盘蓝色指南针品牌标识" />
+            <img src="./assets/logo-paperplane-green.png" alt="智博罗盘绿色纸飞机品牌备选标识" />
+          </div>
+          <p class="eyebrow">AI + 导师数据库 + 投递闭环</p>
+          <h1>把博士申请从信息搜集，变成可执行的申博计划</h1>
+          <p class="hero-lead">
+            智博罗盘整合高校导师库、AI导师匹配、招生名额投递、RP辅导和申请进度管理，帮助学生更快找到合适导师，更稳地推进博士申请。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#mentor-search">查询导师</a>
+            <a class="secondary-button" href="#ai-match">生成AI匹配</a>
+          </div>
+          <div class="proof-strip" aria-label="平台数据">
+            <div><strong>12,860</strong><span>导师档案</span></div>
+            <div><strong>428</strong><span>开放招生名额</span></div>
+            <div><strong>91%</strong><span>示例匹配度</span></div>
+          </div>
+        </div>
+
+        <div class="hero-product" aria-label="智博罗盘产品界面预览">
+          <div class="browser-frame">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <div class="product-toolbar">
+              <div>
+                <small>导师检索</small>
+                <strong>AI推荐列表</strong>
+              </div>
+              <button>导出清单</button>
+            </div>
+            <div class="search-row">
+              <span>教育技术 / AI学习分析</span>
+              <b>筛选：申请制 · 华东地区 · 招生中</b>
+            </div>
+            <div class="mentor-preview-list">
+              <article>
+                <div>
+                  <strong>陈教授</strong>
+                  <span>华东师范大学 · 教育技术</span>
+                </div>
+                <em>94% 匹配</em>
+              </article>
+              <article>
+                <div>
+                  <strong>刘教授</strong>
+                  <span>浙江大学 · 数字治理</span>
+                </div>
+                <em>88% 匹配</em>
+              </article>
+              <article>
+                <div>
+                  <strong>王教授</strong>
+                  <span>南京大学 · 社会计算</span>
+                </div>
+                <em>83% 匹配</em>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="mentor-search">
+        <div class="section-heading">
+          <p class="eyebrow">导师库体验</p>
+          <h2>先把导师信息查清楚</h2>
+          <p>网站首期应优先做导师检索，这是获客、留存和AI匹配的基础入口。</p>
+        </div>
+        <div class="finder">
+          <div class="finder-panel">
+            <label for="keyword">研究方向关键词</label>
+            <input id="keyword" type="text" value="人工智能 教育技术" />
+            <label for="region">目标地区</label>
+            <select id="region">
+              <option>华东地区</option>
+              <option>北京/天津</option>
+              <option>华南地区</option>
+              <option>不限地区</option>
+            </select>
+            <label for="method">招生方式</label>
+            <select id="method">
+              <option>申请考核制</option>
+              <option>统考</option>
+              <option>硕博连读</option>
+              <option>不限方式</option>
+            </select>
+            <button id="searchButton">智能检索</button>
+          </div>
+          <div class="result-panel" id="mentorResults" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section-band light" id="ai-match">
+        <div class="section-heading">
+          <p class="eyebrow">AI智能导师匹配</p>
+          <h2>上传背景，得到冲刺、稳申、保底三类导师</h2>
+          <p>这里先做网站端的交互演示，后续可接简历解析、论文方向识别和真实导师数据库。</p>
+        </div>
+        <div class="ai-workbench">
+          <div class="profile-box">
+            <h3>学生画像</h3>
+            <p>硕士：教育技术学</p>
+            <p>论文：学习分析、生成式AI辅助教学</p>
+            <p>目标：申请制博士，优先华东高校</p>
+            <button id="refreshMatch">重新生成匹配</button>
+          </div>
+          <div class="match-columns" id="matchColumns"></div>
+        </div>
+      </section>
+
+      <section class="section-band" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">网站核心服务</p>
+          <h2>先上线最能形成闭环的四个模块</h2>
+        </div>
+        <div class="service-grid">
+          <article>
+            <span>01</span>
+            <h3>全域高校导师数据库</h3>
+            <p>高校、学院、导师、招生状态、研究方向和官网来源结构化呈现。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>AI导师匹配</h3>
+            <p>解析学生背景，输出匹配理由、风险提醒和陶瓷优先级。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>招生名额投递</h3>
+            <p>导师入驻发布名额，学生上传材料并跟踪投递状态。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>RP写作辅导</h3>
+            <p>AI预审、套餐购买、老师接单、交付验收和售后评价。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band pricing-band" id="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">商业化设计</p>
+          <h2>免费入口 + 会员增值 + 高客单服务</h2>
+        </div>
+        <div class="pricing-grid">
+          <article>
+            <h3>免费体验</h3>
+            <strong>¥0</strong>
+            <p>导师基础查询、社区浏览、有限AI匹配次数。</p>
+            <ul>
+              <li>基础导师检索</li>
+              <li>收藏3位导师</li>
+              <li>AI匹配1次</li>
+            </ul>
+          </article>
+          <article class="featured-plan">
+            <h3>AI申博会员</h3>
+            <strong>¥199/月</strong>
+            <p>适合正在批量筛选导师、准备投递材料的申请者。</p>
+            <ul>
+              <li>无限AI匹配刷新</li>
+              <li>陶瓷清单导出</li>
+              <li>截止时间提醒</li>
+            </ul>
+          </article>
+          <article>
+            <h3>RP深度辅导</h3>
+            <strong>¥899起</strong>
+            <p>适合需要研究计划书框架、修改和院校定制的用户。</p>
+            <ul>
+              <li>AI免费预审</li>
+              <li>博士老师接单</li>
+              <li>订单售后保障</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band light" id="roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">开发路线</p>
+          <h2>网站先跑通验证，再延展APP</h2>
+        </div>
+        <div class="timeline">
+          <div><span>一期</span><p>官网首页、导师检索、AI匹配演示、RP服务转化、管理员数据维护。</p></div>
+          <div><span>二期</span><p>用户登录、收藏导师、材料库、投递状态、社区内容和会员体系。</p></div>
+          <div><span>三期</span><p>真实AI解析、导师入驻后台、支付订单、风控审核、APP端同步。</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>智博罗盘</strong>
+      <span>先做网站验证需求，再把高频流程沉淀到APP。</span>
+    </footer>
+
+    <script src="./src/app.js" defer></script>
+  </body>
+</html>
